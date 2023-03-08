@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade - 4</title>
+    <script src="../node_modules/web3/dist/web3.min.js"></script>
+  </head>
+  <body>
+
+    <script>
+
+      const web3 = new Web3("HTTP://127.0.0.1:7545");
+
+      const contractAddress = "0x64B8BDF48347a59990E3357420202F28487A2336";
+
+      const contractABI = [
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "newIntegerNumber",
+              type: "uint256",
+            },
+          ],
+          name: "setIntegerNumber",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        }
+      ];
+
+      const at4Contract = new web3.eth.Contract(contractABI, contractAddress);
+
+    </script>
+
+    <h1>Atividade - 4: </h1>
+
+  </body>
+</html>
