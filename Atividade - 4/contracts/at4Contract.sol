@@ -4,10 +4,14 @@ pragma solidity ^0.8.19;
 
 contract at4Contract {
 
-    uint private integerNumber = 10;
+    uint numero = 10;
 
-    function setIntegerNumber(uint newIntegerNumber) public {
-        integerNumber = newIntegerNumber;
+    function retornaNumeroView() external view returns(uint) {
+        return numero;
+    }
+
+    function retornaNumero(uint a, uint b) external pure returns(uint) {
+        return a + b;
     }
     
 }
