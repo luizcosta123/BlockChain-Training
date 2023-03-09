@@ -7,35 +7,23 @@
     <title>Atividade - 4</title>
     <script src="../node_modules/web3/dist/web3.min.js"></script>
   </head>
+
   <body>
 
     <script>
-
+      
       const web3 = new Web3("HTTP://127.0.0.1:7545");
 
-      const contractAddress = "0x64B8BDF48347a59990E3357420202F28487A2336";
+      const contractAddress = "0x6896dBE18081b0A232936C88a7E34cF6596cA02A";
 
-      const contractABI = [
-        {
-          inputs: [
-            {
-              internalType: "uint256",
-              name: "newIntegerNumber",
-              type: "uint256",
-            },
-          ],
-          name: "setIntegerNumber",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        }
-      ];
-
-      const at4Contract = new web3.eth.Contract(contractABI, contractAddress);
+      web3.eth.getStorageAt(contractAddress, 0).then((result) => {
+        console.log("valor de armazenamento do contrato: " + result);
+      });
 
     </script>
 
-    <h1>Atividade - 4: </h1>
+    <h1>Atividade - 4:</h1>
 
   </body>
+
 </html>
